@@ -27,10 +27,13 @@ class BlogTest(TestCase):
         self.assertEqual(b.__repr__(), 'Test By Nico Author (1 post)')
         self.assertEqual(b1.__repr__(), 'My Day By Nico (2 posts)')
     
+    def test_create_post(self):
+        pass
+    
     def test_read(self):
         r = Blog('', 'FF')
         r1 = Blog('', 'Nico')
         
-        self.assertEqual(r.__read__(), 'The author dont exist')
-        self.assertEqual(r1.__read__(), 'Nico By 5 posts')
+        self.assertEqual(r.read_author(), 'The author dont exist')
+        self.assertEqual(r1.read_author(), 'Nico By 5 posts')
         

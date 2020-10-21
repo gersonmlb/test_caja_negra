@@ -9,11 +9,8 @@ class Blog:
         return '{} By {} ({} {})'.format(self.title, self.author, 
                                          len(self.posts), 
                                          'posts' if len(self.posts) != 1 else 'post')
-        
-    def edit_post(self):
-      pass
     
-    def __read__(self):
+    def read_author(self):
       #title, author, posts
       authors = ['Test', 'Nico', 'FM', 'AM']
       posts = ['3 posts', '5 posts', '4 posts', '8 posts']
