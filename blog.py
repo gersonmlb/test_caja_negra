@@ -10,4 +10,20 @@ class Blog:
                                          len(self.posts), 
                                          'posts' if len(self.posts) != 1 else 'post')
         
+    def edit_post(self):
+      pass
+    
+    def __read__(self):
+      #title, author, posts
+      authors = ['Test', 'Nico', 'FM', 'AM']
+      posts = ['3 posts', '5 posts', '4 posts', '8 posts']
+      
+      if self.author in authors:
+        longitud = authors.index(self.author)
+        return '{} By {}'.format(self.author, posts[longitud])
+      
+      else:
+        return 'The author dont exist'
+      
+        
       
